@@ -13,7 +13,7 @@ export class ApicallsService {
   public signUp(email, password){
     //console.log("Signup Method Came");
     const passEncrypt = CryptoJS.AES.encrypt(password, 'sample key for hashing').toString();
-     console.log(passEncrypt);
+     //console.log(passEncrypt);
     const data = {
      "email": email,
      "password": passEncrypt
@@ -26,7 +26,7 @@ export class ApicallsService {
 
   public login(email, password, token):Observable<any>{
      const passEncrypt = CryptoJS.AES.encrypt(password, 'sample key for hashing').toString();
-     console.log(passEncrypt);
+     //console.log(passEncrypt);
       const data = {
         "email": email,
         "password": passEncrypt
@@ -34,7 +34,7 @@ export class ApicallsService {
    return this.http.post('https://karthik1998-task-manager-app.herokuapp.com/user/login', data).pipe(tap(data=>{
       //console.log("Data from Tap is: ", data);
      this.tokenFromServer = data['token'];
-      console.log("Token from Tap is: ", this.tokenFromServer);
+     // console.log("Token from Tap is: ", this.tokenFromServer);
     }));
   }
 

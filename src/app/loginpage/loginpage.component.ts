@@ -19,7 +19,7 @@ export class LoginpageComponent implements OnInit {
   signUpApi(email, password){
     //console.log(email, password);
     this.apiServiceObj.signUp(email, password).subscribe(data=>{
-      console.log(data);
+      //console.log(data);
       this.token = data['token'];
       this.router.navigateByUrl("/firstPage/"+data['user']._id);
     }, error=>{
@@ -31,7 +31,7 @@ export class LoginpageComponent implements OnInit {
 
   loginApi(email, password){
     this.apiServiceObj.login(email, password, this.token).subscribe(data=>{
-      console.log(data);
+      //console.log(data);
       this.token = data['token'];
       this.router.navigateByUrl("/firstPage/"+data['user']._id);
     },(error)=>{
