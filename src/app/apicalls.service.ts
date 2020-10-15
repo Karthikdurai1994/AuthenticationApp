@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
+import * as CryptoJS from 'crypto-js';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,24 +12,29 @@ export class ApicallsService {
   tokenFromServer: string;
   public signUp(email, password){
     //console.log("Signup Method Came");
+    const passEncrypt = CryptoJS.AES.encrypt(password, 'sample key for hashing').toString();
+     console.log(passEncrypt);
     const data = {
      "email": email,
-     "password": password
+     "password": passEncrypt
     };
     return this.http.post("https://karthik1998-task-manager-app.herokuapp.com/users", data).pipe(tap(data=>{
       this.tokenFromServer = data['token'];
     }));
   }
 
+
   public login(email, password, token):Observable<any>{
+     const passEncrypt = CryptoJS.AES.encrypt(password, 'sample key for hashing').toString();
+     console.log(passEncrypt);
       const data = {
         "email": email,
-        "password": password
+        "password": passEncrypt
       };
-    return this.http.post('https://karthik1998-task-manager-app.herokuapp.com/user/login', data).pipe(tap(data=>{
+   return this.http.post('https://karthik1998-task-manager-app.herokuapp.com/user/login', data).pipe(tap(data=>{
       //console.log("Data from Tap is: ", data);
-      this.tokenFromServer = data['token'];
-      //console.log("Token from Tap is: ", this.tokenFromServer);
+     this.tokenFromServer = data['token'];
+      console.log("Token from Tap is: ", this.tokenFromServer);
     }));
   }
 
