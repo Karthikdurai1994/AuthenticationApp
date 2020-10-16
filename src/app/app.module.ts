@@ -8,7 +8,7 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 
 import { SecondpageComponent } from './Pages/secondpage/secondpage.component';
 import { ApicallsService } from './apicalls.service';
-import { FirstpageComponent } from './pages/firstpage/firstpage.component';
+import { FirstpageComponent } from './Pages/firstpage/firstpage.component';
 
 @NgModule({
   declarations: [
