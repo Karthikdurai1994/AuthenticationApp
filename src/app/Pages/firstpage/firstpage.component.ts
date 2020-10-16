@@ -15,7 +15,7 @@ export class FirstpageComponent implements OnInit {
     this.browserRefresh = browserRefresh;
     console.log('refreshed?:', browserRefresh);
     if(this.browserRefresh){
-      this.router.navigateByUrl("https://authenicationapp.netlify.app");
+      this.router.navigateByUrl("");
     }
   }
 
