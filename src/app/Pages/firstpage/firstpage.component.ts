@@ -9,7 +9,7 @@ import { browserRefresh } from '../../app.component';
 })
 export class FirstpageComponent implements OnInit {
   public browserRefresh: boolean;
-  public e:Array<any>;
+  public e:Array<string>;
   constructor(private apicallsServiceObj:ApicallsService, private router: Router) { }
 
   ngOnInit() {
