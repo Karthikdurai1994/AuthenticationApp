@@ -28,7 +28,8 @@ export class FirstpageComponent implements OnInit {
        var e = function(){
         (e["q"]=e["q"]||[]).push(arguments)
        };
-       e["q"]=e["q"]||[],t["BotStarApi"]=e;
+       e["q"]=e["q"]||[];
+       t["BotStarApi"]=e;
        !function(): any{
         var t=a.createElement("script");
         t.type="text/javascript",t.async=true,t.src="https://widget.botstar.com/static/js/widget.js";
