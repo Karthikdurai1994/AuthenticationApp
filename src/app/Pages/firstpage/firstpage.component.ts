@@ -17,7 +17,10 @@ export class FirstpageComponent implements OnInit {
     if(this.browserRefresh){
       this.router.navigateByUrl("");
     }
+
   }
+
+
 
   logout(){
      console.log(this.apicallsServiceObj.getToken());
