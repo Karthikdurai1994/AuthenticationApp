@@ -17,9 +17,12 @@ export class FirstpageComponent implements OnInit {
     if(this.browserRefresh){
       this.router.navigateByUrl("");
     }
+    this.onLoadChatBot();
 
   }
-
+  onLoadChatBot(){
+    console.log("Came to chatbot function");
+  }
 
 
   logout(){
