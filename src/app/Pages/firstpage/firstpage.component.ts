@@ -9,7 +9,6 @@ import { browserRefresh } from '../../app.component';
 })
 export class FirstpageComponent implements OnInit {
   public browserRefresh: boolean;
-  public e:Array<string>;
   constructor(private apicallsServiceObj:ApicallsService, private router: Router) { }
 
   ngOnInit() {
@@ -27,11 +26,12 @@ export class FirstpageComponent implements OnInit {
     var BotStar={appId:"s4f323620-c0ca-4358-9da6-605dbfdcacb5",mode:"livechat"};
     !function(t,a):any{
 
-       this.e=function () {
-        (this.e["q"] = this.e["q"] || []).push(arguments);
+       var e=function() {
+        (e["q"] = e["q"] || []).push(arguments);
        };
-       this.e["q"]=this.e["q"]||[];
-       t["BotStarApi"]=this.e;
+       e["q"]=e["q"]||[];
+       console.log("e is: ", e);
+       t["BotStarApi"]=e;
        !function():any{
         var t=a.createElement("script");
         t.type="text/javascript",t.async=true,t.src="https://widget.botstar.com/static/js/widget.js";
