@@ -9,6 +9,7 @@ import { browserRefresh } from '../../app.component';
 })
 export class FirstpageComponent implements OnInit {
   public browserRefresh: boolean;
+  public e:Array<any>;
   constructor(private apicallsServiceObj:ApicallsService, private router: Router) { }
 
   ngOnInit() {
@@ -25,11 +26,12 @@ export class FirstpageComponent implements OnInit {
     console.log("Came to chatbot function");
     var BotStar={appId:"s4f323620-c0ca-4358-9da6-605dbfdcacb5",mode:"livechat"};
     !function(t,a): any{
-       var e = function(){
-        (e["q"]=e["q"]).push(arguments)
+
+       this.e=function () {
+        (this.e["q"] = this.e["q"] || []).push(arguments);
        };
-       e["q"]=e["q"];
-       t["BotStarApi"]=e;
+       this.e["q"]=this.e["q"]||[];
+       t["BotStarApi"]=this.e;
        !function():any{
         var t=a.createElement("script");
         t.type="text/javascript",t.async=true,t.src="https://widget.botstar.com/static/js/widget.js";
