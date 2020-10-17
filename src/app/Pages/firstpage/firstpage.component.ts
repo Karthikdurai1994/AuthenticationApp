@@ -25,7 +25,7 @@ export class FirstpageComponent implements OnInit {
 
     console.log("Came to chatbot function");
     var BotStar={appId:"s4f323620-c0ca-4358-9da6-605dbfdcacb5",mode:"livechat"};
-    !function(t,a){
+    !function(t,a):any{
 
        this.e=function () {
         (this.e["q"] = this.e["q"] || []).push(arguments);
@@ -37,8 +37,8 @@ export class FirstpageComponent implements OnInit {
         t.type="text/javascript",t.async=true,t.src="https://widget.botstar.com/static/js/widget.js";
         var e=a.getElementsByTagName("script")[0];
         e.parentNode.insertBefore(t,e)
-       };
-    }
+       }();
+    }(window,document)
 
   }
 
