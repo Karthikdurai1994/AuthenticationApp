@@ -32,13 +32,14 @@ export class FirstpageComponent implements OnInit {
     }
   };
   !function(t,a):any{
-
+     console.log("Function 1");
 
        var e:{ (...args: any[]): void; }=function(...args:any){(e["q"]=e["q"]||[]).push(arguments)};
        e["q"]=e["q"]||[];
        console.log("e is: ", e);
        t["BotStarApi"]=e;
        !function():any{
+         console.log("Function 2");
         var t=a.createElement("script");
         t.type="text/javascript",t.async=true,t.src="https://widget.botstar.com/static/js/widget.js";
         var e=a.getElementsByTagName("script")[0];
