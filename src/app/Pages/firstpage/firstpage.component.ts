@@ -40,15 +40,15 @@ export class FirstpageComponent implements OnInit {
        t["BotStarApi"]=e;
        !function():any{
         console.log("Function 2");
-        let body = <HTMLDivElement> document.body;
+        var b = a.createElement("body");
         var t=a.createElement("script");
 
         t.type="text/javascript",t.src="https://widget.botstar.com/static/js/widget.js";
         var e=a.getElementsByTagName("script")[0];
-        e.parentNode.insertBefore(t,e)
-        t.async = true;
+        e.parentNode.insertBefore(t,e);
         t.defer = true;
-        body.appendChild(t);
+        e.defer = true;
+        b.appendChild(t);
 
        }();
     }(window,document)
