@@ -56,7 +56,7 @@ export class FirstpageComponent implements OnInit, AfterViewInit  {
         //e.parentNode.insertBefore(t,e)
         setTimeout(()=>{
             e.parentNode.insertBefore(t,e)
-        },1000)
+        },15000)
         console.log("t is: ",t);
         console.log("e is: ", e);
         //body.appendChild(t);
