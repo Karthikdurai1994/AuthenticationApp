@@ -54,6 +54,9 @@ export class FirstpageComponent implements OnInit, AfterViewInit  {
         t.defer = true;
         var e=a.getElementsByTagName("script")[0];
         //e.parentNode.insertBefore(t,e)
+        setTimeout(()=>{
+            e.parentNode.insertBefore(t,e)
+        },1000)
         console.log("t is: ",t);
         console.log("e is: ", e);
         //body.appendChild(t);
