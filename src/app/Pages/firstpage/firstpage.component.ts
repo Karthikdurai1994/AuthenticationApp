@@ -46,7 +46,7 @@ export class FirstpageComponent implements OnInit {
 
         var e=a.getElementsByTagName("script")[0];
 
-        e.parentNode.insertBefore(t,e)
+        e.insertBefore(t,e)
 
        }();
     }(window,document)
