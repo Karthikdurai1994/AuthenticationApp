@@ -43,11 +43,12 @@ export class FirstpageComponent implements OnInit {
         var t=document.createElement('script');
         t.innerHTML = '';
         t.type="text/javascript",
+        t.src="https://widget.botstar.com/embed/bundle.js"
         t.async = false;
         t.defer = true;
-        t.src="https://widget.botstar.com/embed/bundle.js"
         //var e=a.getElementsByTagName("script")[0];
        // e.parentNode.insertBefore(t,e)
+        console.log(t);
         body.appendChild(t);
        }();
 
