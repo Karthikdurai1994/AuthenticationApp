@@ -34,7 +34,7 @@ export class FirstpageComponent implements OnInit {
   !function(t,a):any{
      console.log("Function 1");
 
-       var e: { (...args: any[]): void; q ?: any; }=function(...args:any[]){(e["q"]=e["q"]||[]).push(arguments)};
+       var e = function(){(e["q"]=e["q"]||[]).push(arguments)};
        e["q"]=e["q"]||[];
        console.log("e is: ", e);
        t["BotStarApi"]=e;
