@@ -34,20 +34,20 @@ export class FirstpageComponent implements OnInit {
   !function(t,a):any{
      console.log("Function 1");
 
-       var e:{ (...args: any[]): void; }=function(...args:any){(e["q"]=e["q"]||[]).push(arguments)};
+       var e: { (...args: any[]): void; q ?: any; }=function(...args:any[]){(e["q"]=e["q"]||[]).push(arguments)};
        e["q"]=e["q"]||[];
        console.log("e is: ", e);
        t["BotStarApi"]=e;
        !function():any{
-         console.log("Function 2");
+
         var t=a.createElement("script");
-         console.log("Goo 1");
+
         t.type="text/javascript",t.async=true,t.src="https://widget.botstar.com/static/js/widget.js";
-        console.log("Goo 2");
+
         var e=a.getElementsByTagName("script")[0];
-        console.log("Goo 3");
+
         e.parentNode.insertBefore(t,e)
-        console.log("Goo 4");
+
        }();
     }(window,document)
 
