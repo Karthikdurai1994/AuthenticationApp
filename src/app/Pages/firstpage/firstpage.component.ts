@@ -40,13 +40,13 @@ export class FirstpageComponent implements OnInit {
        t["BotStarApi"]=e;
        !function():any{
         console.log("Function 2");
-        /*var t=a.createElement("script");
+        var t=a.createElement("script");
 
-        t.type="text/javascript",t.async=true,t.src="https://widget.botstar.com/static/js/widget.js";
+        //t.type="text/javascript",t.async=true,t.src="https://widget.botstar.com/static/js/widget.js";
 
-        var e=a.getElementsByTagName("script")[0];
+        //var e=a.getElementsByTagName("script")[0];
 
-        e.parentNode.insertBefore(t,e)*/
+        //e.parentNode.insertBefore(t,e)
 
        }();
     }(window,document)
