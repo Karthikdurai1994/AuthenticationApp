@@ -23,37 +23,37 @@ export class FirstpageComponent implements OnInit {
   onLoadChatBot(){
 
     console.log("Came to chatbot function");
-    var BotStar=
-   {
-    appId:"s4f323620-c0ca-4358-9da6-605dbfdcacb5",
-    mode:"livechat",
-    variables: {
-     userTokens: "The Witcher",
-    }
-  };
-  !function(t,a):any{
-     console.log("Function 1");
+  //   var BotStar=
+  //  {
+  //   appId:"s4f323620-c0ca-4358-9da6-605dbfdcacb5",
+  //   mode:"livechat",
+  //   variables: {
+  //    userTokens: "The Witcher",
+  //   }
+  // };
+  // !function(t,a):any{
+  //    console.log("Function 1");
 
-       var e = function(){(e["q"]=e["q"]||[]).push(arguments)};
-       e["q"]=e["q"]||[];
-       console.log("e is: ", e);
-       t["BotStarApi"]=e;
-       !function():any{
-        //const body = <HTMLDivElement> document.body;
-        var t=a.createElement('script');
-        t.innerHTML = '';
-        t.type="text/javascript",
-        t.src="https://widget.botstar.com/embed/bundle.js"
-        t.async = false;
-        t.defer = true;
-        var e=a.getElementsByTagName("script")[0];
-        e.parentNode.insertBefore(t,e)
-        console.log("t is: ",t);
-        console.log("e is: ", e);
-      //  body.appendChild(t);
-       }();
+  //      var e = function(){(e["q"]=e["q"]||[]).push(arguments)};
+  //      e["q"]=e["q"]||[];
+  //      console.log("e is: ", e);
+  //      t["BotStarApi"]=e;
+  //      !function():any{
+  //       //const body = <HTMLDivElement> document.body;
+  //       var t=a.createElement('script');
+  //       t.innerHTML = '';
+  //       t.type="text/javascript",
+  //       t.src="https://widget.botstar.com/embed/bundle.js"
+  //       t.async = false;
+  //       t.defer = true;
+  //       var e=a.getElementsByTagName("script")[0];
+  //       e.parentNode.insertBefore(t,e)
+  //       console.log("t is: ",t);
+  //       console.log("e is: ", e);
+  //     //  body.appendChild(t);
+  //      }();
 
-    }(window,document)
+  //   }(window,document)
 
   }
 
