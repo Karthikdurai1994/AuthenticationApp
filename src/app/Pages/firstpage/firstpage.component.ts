@@ -1,3 +1,4 @@
+import { AfterViewInit } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApicallsService } from 'src/app/apicalls.service';
@@ -7,7 +8,7 @@ import { browserRefresh } from '../../app.component';
   templateUrl: './firstpage.component.html',
   styleUrls: ['./firstpage.component.css']
 })
-export class FirstpageComponent implements OnInit {
+export class FirstpageComponent implements OnInit, AfterViewInit  {
   public browserRefresh: boolean;
   constructor(private apicallsServiceObj:ApicallsService, private router: Router) { }
 
@@ -17,9 +18,14 @@ export class FirstpageComponent implements OnInit {
     if(this.browserRefresh){
       this.router.navigateByUrl("");
     }
-    this.onLoadChatBot();
+
 
   }
+  ngAfterViewInit() {
+    console.log("ngAfterViewInit came");
+    this.onLoadChatBot();
+  }
+
   onLoadChatBot(){
 
     console.log("Came to chatbot function");
@@ -39,18 +45,18 @@ export class FirstpageComponent implements OnInit {
        console.log("e is: ", e);
        t["BotStarApi"]=e;
        !function():any{
-        const body = <HTMLDivElement> document.body;
+        //const body = <HTMLDivElement> document.body;
         var t=document.createElement('script');
         t.innerHTML = '';
         t.type="text/javascript",
         t.src="https://widget.botstar.com/static/js/widget.js"
         t.async = false;
         t.defer = true;
-        //var e=a.getElementsByTagName("script")[0];
-        //e.parentNode.insertBefore(t,e)
+        var e=a.getElementsByTagName("script")[0];
+        e.parentNode.insertBefore(t,e)
         console.log("t is: ",t);
-        //console.log("e is: ", e);
-        body.appendChild(t);
+        console.log("e is: ", e);
+        //body.appendChild(t);
        }();
 
     }(window,document)
