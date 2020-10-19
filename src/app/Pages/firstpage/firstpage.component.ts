@@ -39,18 +39,18 @@ export class FirstpageComponent implements OnInit {
        console.log("e is: ", e);
        t["BotStarApi"]=e;
        !function():any{
-        //const body = <HTMLDivElement> document.body;
-        var t=a.createElement('script');
+        const body = <HTMLDivElement> document.body;
+        var t=document.createElement('script');
         t.innerHTML = '';
         t.type="text/javascript",
         t.src="https://widget.botstar.com/static/js/widget.js"
         t.async = false;
         t.defer = true;
-        var e=a.getElementsByTagName("script")[0];
-        e.parentNode.insertBefore(t,e)
+        //var e=a.getElementsByTagName("script")[0];
+        //e.parentNode.insertBefore(t,e)
         console.log("t is: ",t);
-        console.log("e is: ", e);
-      //  body.appendChild(t);
+        //console.log("e is: ", e);
+        body.appendChild(t);
        }();
 
     }(window,document)
