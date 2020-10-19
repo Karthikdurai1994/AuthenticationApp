@@ -40,7 +40,7 @@ export class FirstpageComponent implements OnInit {
        t["BotStarApi"]=e;
        !function():any{
         const body = <HTMLDivElement> document.body;
-        var t=a.createElement("script");
+        var t=document.createElement('script');
         t.innerHTML = '';
         t.type="text/javascript",
         t.async = false;
