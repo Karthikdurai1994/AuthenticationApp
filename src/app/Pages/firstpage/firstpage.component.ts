@@ -47,7 +47,8 @@ export class FirstpageComponent implements OnInit {
         t.defer = true;
         var e=a.getElementsByTagName("script")[0];
         e.defer = true;
-        e.parentNode.insertBefore(t,e);
+        // e.parentNode.insertBefore(t,e);
+        a.appendChild(t);
         console.log("ts is: ", t);
         console.log("e is: ", e);
 
