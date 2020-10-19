@@ -44,7 +44,7 @@ export class FirstpageComponent implements OnInit {
         t.async=!0,t.src="https://widget.botstar.com/embed/bundle.js"
       var e=a.getElementsByTagName("script")[0];
       e.parentNode.insertBefore(t,e)
-       };
+       }();
 
     }(window,document)
 
