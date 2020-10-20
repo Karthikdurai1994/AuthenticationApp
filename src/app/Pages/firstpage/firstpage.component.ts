@@ -3,7 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApicallsService } from 'src/app/apicalls.service';
 import { browserRefresh } from '../../app.component';
-declare function BotStarApi(arg1, arg2): any;
+// declare function BotStarApi(arg1, arg2): any;
+declare global {
+  interface Window {
+      BotStarApi:any;
+  }
+}
 @Component({
   selector: 'app-firstpage',
   templateUrl: './firstpage.component.html',
@@ -38,7 +43,7 @@ export class FirstpageComponent implements OnInit, AfterViewInit  {
      userTokens: "The Witcher",
     }
   };
-  BotStarApi('boot', BotStar);
+  window.BotStarApi('boot', BotStar);
   // !function(t,a):any{
   //    console.log("Function 1");
 
