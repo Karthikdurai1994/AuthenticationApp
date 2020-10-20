@@ -76,16 +76,14 @@ export class FirstpageComponent implements OnInit, AfterViewInit {
     //   }(window,document)
   }
 
-  logout() {
+  // logout() {
 
-    console.log(this.apicallsServiceObj.getToken());
-    this.apicallsServiceObj.logout().subscribe((data) => {
-      console.log(data);
-      //this.router.navigateByUrl("");
-      this.router.navigateByUrl("", { skipLocationChange: true }).then(() => {
-        this.router.navigate([LoginpageComponent]);
-    });
+  //   console.log(this.apicallsServiceObj.getToken());
+  //   this.apicallsServiceObj.logout().subscribe((data) => {
+  //     console.log(data);
+  //     //this.router.navigateByUrl("");
 
-    });
-  }
+
+  //   });
+  // }
 }
