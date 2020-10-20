@@ -30,7 +30,7 @@ export class FirstpageComponent implements OnInit, AfterViewInit {
       this.router.navigateByUrl("");
     }
 
-    new hello();
+    //new hello();
   }
   ngAfterViewInit() {
     console.log("ngAfterViewInit came");
