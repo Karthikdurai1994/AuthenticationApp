@@ -46,7 +46,7 @@ export class FirstpageComponent implements OnInit, AfterViewInit  {
        t["BotStarApi"]=e;
        !function():any{
         //const body = <HTMLDivElement> document.body;
-        var t=document.createElement('script');
+        var t=a.createElement('script');
         t.innerHTML = '';
         t.type="text/javascript",
         t.src="https://widget.botstar.com/static/js/widget.js"
@@ -54,9 +54,8 @@ export class FirstpageComponent implements OnInit, AfterViewInit  {
         t.defer = true;
         var e=a.getElementsByTagName("script")[0];
         //e.parentNode.insertBefore(t,e)
-        setTimeout(()=>{
-            e.parentNode.insertBefore(t,e)
-        },15000)
+       // e.parentNode.insertBefore(t,e)
+
         console.log("t is: ",t);
         console.log("e is: ", e);
         //body.appendChild(t);
