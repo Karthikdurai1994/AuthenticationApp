@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApicallsService } from 'src/app/apicalls.service';
 import { browserRefresh } from '../../app.component';
+import "../../../assets/script.js";
 // declare function BotStarApi(arg1, arg2): any;
+declare var hello: any;
 declare global {
   interface Window {
       BotStarApi:any;
@@ -25,7 +27,7 @@ export class FirstpageComponent implements OnInit, AfterViewInit  {
       this.router.navigateByUrl("");
     }
 
-
+   new hello();
   }
   ngAfterViewInit() {
     console.log("ngAfterViewInit came");
@@ -35,45 +37,42 @@ export class FirstpageComponent implements OnInit, AfterViewInit  {
   onLoadChatBot(){
 
     console.log("Came to chatbot function");
-    var BotStar=
-   {
-    appId:"s4f323620-c0ca-4358-9da6-605dbfdcacb5",
-    mode:"livechat",
-    variables: {
-     userTokens: "The Witcher",
-    }
-  };
-  //window.BotStarApi('boot', BotStar);
-  !function(t,a):any{
-     console.log("Function 1");
+  //   var BotStar=
+  //  {
+  //   appId:"s4f323620-c0ca-4358-9da6-605dbfdcacb5",
+  //   mode:"livechat",
+  //   variables: {
+  //    userTokens: "The Witcher",
+  //   }
+  // };
+  // //window.BotStarApi('boot', BotStar);
+  // !function(t,a):any{
+  //    console.log("Function 1");
 
-       var e = function(){(e["q"]=e["q"]||[]).push(arguments)};
-       e["q"]=e["q"]||[];
-       console.log("e is: ", e);
-       t["BotStarApi"]=e;
-       !function():any{
-        const body = <HTMLDivElement> a.body;
-        var t=a.createElement('script');
-        t.innerHTML = '';
-        t.type="text/javascript",
-        t.src="https://widget.botstar.com/static/js/widget.js"
-        t.async = false;
-        t.defer = true;
-        //var e=a.getElementsByTagName("script")[0];
-        setTimeout(()=>{
-          body.appendChild(t);
-        }, 20000);
+  //      var e = function(){(e["q"]=e["q"]||[]).push(arguments)};
+  //      e["q"]=e["q"]||[];
+  //      console.log("e is: ", e);
+  //      t["BotStarApi"]=e;
+  //      !function():any{
+  //       const body = <HTMLDivElement> a.body;
+  //       var t=a.createElement('script');
+  //       t.innerHTML = '';
+  //       t.type="text/javascript",
+  //       t.src="https://widget.botstar.com/static/js/widget.js"
+  //       t.async = false;
+  //       t.defer = true;
+  //       //var e=a.getElementsByTagName("script")[0];
+  //       body.appendChild(t);
+  //     //  t.parentNode.insertBefore(e, t.nextSibling);
+  //       //e.parentNode.insertBefore(t,e)
+  //      // e.parentNode.insertBefore(t,e)
 
-      //  t.parentNode.insertBefore(e, t.nextSibling);
-        //e.parentNode.insertBefore(t,e)
-       // e.parentNode.insertBefore(t,e)
+  //       console.log("t is: ",t);
+  //       console.log("e is: ", e);
+  //       //body.appendChild(t);
+  //      }();
 
-        console.log("t is: ",t);
-        console.log("e is: ", e);
-        //body.appendChild(t);
-       }();
-
-    }(window,document)
+  //   }(window,document)
 
   }
 
