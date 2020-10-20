@@ -19,6 +19,7 @@ declare global {
 })
 export class FirstpageComponent implements OnInit, AfterViewInit {
   public browserRefresh: boolean;
+  public flag:boolean = false;
   constructor(
     private apicallsServiceObj: ApicallsService,
     private router: Router
