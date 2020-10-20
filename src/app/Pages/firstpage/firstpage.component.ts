@@ -2,8 +2,9 @@ import { AfterViewInit } from "@angular/core";
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { ApicallsService } from "src/app/apicalls.service";
-import { browserRefresh } from "../../app.component";
+import { AppComponent, browserRefresh } from "../../app.component";
 import "../../../assets/script.js";
+import { LoginpageComponent } from 'src/app/loginpage/loginpage.component';
 // declare function BotStarApi(arg1, arg2): any;
 declare var hello: any;
 declare global {
@@ -79,13 +80,11 @@ export class FirstpageComponent implements OnInit, AfterViewInit {
     console.log(this.apicallsServiceObj.getToken());
     this.apicallsServiceObj.logout().subscribe((data) => {
       console.log(data);
-      this.router.navigateByUrl("");
-      var BotStar = {
-        appId: "s4f323620-c0ca-4358-9da6-605dbfdcacb5",
-        mode: "livechat",
-        block: "s7475a853-8587-4f22-afaa-3c859e353208"
-      };
-      window.BotStarApi("close");
+      //this.router.navigateByUrl("");
+      this.router.navigateByUrl("", { skipLocationChange: true }).then(() => {
+        this.router.navigate([LoginpageComponent]);
+    });
+
     });
   }
 }
