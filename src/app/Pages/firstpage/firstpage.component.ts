@@ -1,89 +1,86 @@
-import { AfterViewInit } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { ApicallsService } from 'src/app/apicalls.service';
-import { browserRefresh } from '../../app.component';
+import { AfterViewInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { ApicallsService } from "src/app/apicalls.service";
+import { browserRefresh } from "../../app.component";
 import "../../../assets/script.js";
 // declare function BotStarApi(arg1, arg2): any;
 declare var hello: any;
 declare global {
   interface Window {
-      BotStarApi:any;
+    BotStarApi: any;
   }
 }
 @Component({
-  selector: 'app-firstpage',
-  templateUrl: './firstpage.component.html',
-  styleUrls: ['./firstpage.component.css']
+  selector: "app-firstpage",
+  templateUrl: "./firstpage.component.html",
+  styleUrls: ["./firstpage.component.css"],
 })
-export class FirstpageComponent implements OnInit, AfterViewInit  {
+export class FirstpageComponent implements OnInit, AfterViewInit {
   public browserRefresh: boolean;
-  constructor(private apicallsServiceObj:ApicallsService, private router: Router) { }
+  constructor(
+    private apicallsServiceObj: ApicallsService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.browserRefresh = browserRefresh;
-    console.log('refreshed?:', browserRefresh);
-    if(this.browserRefresh){
+    console.log("refreshed?:", browserRefresh);
+    if (this.browserRefresh) {
       this.router.navigateByUrl("");
     }
 
-   new hello();
+    new hello();
   }
   ngAfterViewInit() {
     console.log("ngAfterViewInit came");
     this.onLoadChatBot();
   }
 
-  onLoadChatBot(){
-
+  onLoadChatBot() {
     console.log("Came to chatbot function");
-    var BotStar=
-   {
-    appId:"s4f323620-c0ca-4358-9da6-605dbfdcacb5",
-    mode:"livechat",
-    variables: {
-     userTokens:
-      "The Witcher",
-    }
-  };
-  window.BotStarApi('boot', BotStar);
-  // !function(t,a):any{
-  //    console.log("Function 1");
+    var BotStar = {
+      appId: "s4f323620-c0ca-4358-9da6-605dbfdcacb5",
+      mode: "livechat",
+      variables: {
+        userTokens: "The Witcher",
+      },
+    };
+    window.BotStarApi("boot", BotStar);
+    // !function(t,a):any{
+    //    console.log("Function 1");
 
-  //      var e = function(){(e["q"]=e["q"]||[]).push(arguments)};
-  //      e["q"]=e["q"]||[];
-  //      console.log("e is: ", e);
-  //      t["BotStarApi"]=e;
-  //      !function():any{
-  //       const body = <HTMLDivElement> a.body;
-  //       var t=a.createElement('script');
-  //       t.innerHTML = '';
-  //       t.type="text/javascript",
-  //       t.src="https://widget.botstar.com/static/js/widget.js"
-  //       t.async = false;
-  //       t.defer = true;
-  //       //var e=a.getElementsByTagName("script")[0];
-  //       body.appendChild(t);
-  //     //  t.parentNode.insertBefore(e, t.nextSibling);
-  //       //e.parentNode.insertBefore(t,e)
-  //      // e.parentNode.insertBefore(t,e)
+    //      var e = function(){(e["q"]=e["q"]||[]).push(arguments)};
+    //      e["q"]=e["q"]||[];
+    //      console.log("e is: ", e);
+    //      t["BotStarApi"]=e;
+    //      !function():any{
+    //       const body = <HTMLDivElement> a.body;
+    //       var t=a.createElement('script');
+    //       t.innerHTML = '';
+    //       t.type="text/javascript",
+    //       t.src="https://widget.botstar.com/static/js/widget.js"
+    //       t.async = false;
+    //       t.defer = true;
+    //       //var e=a.getElementsByTagName("script")[0];
+    //       body.appendChild(t);
+    //     //  t.parentNode.insertBefore(e, t.nextSibling);
+    //       //e.parentNode.insertBefore(t,e)
+    //      // e.parentNode.insertBefore(t,e)
 
-  //       console.log("t is: ",t);
-  //       console.log("e is: ", e);
-  //       //body.appendChild(t);
-  //      }();
+    //       console.log("t is: ",t);
+    //       console.log("e is: ", e);
+    //       //body.appendChild(t);
+    //      }();
 
-  //   }(window,document)
-
+    //   }(window,document)
   }
 
-
-  logout(){
-     console.log(this.apicallsServiceObj.getToken());
-     this.apicallsServiceObj.logout().subscribe(data=>{
-       console.log(data);
-       this.router.navigateByUrl("");
-     })
+  logout() {
+    console.log(this.apicallsServiceObj.getToken());
+    this.apicallsServiceObj.logout().subscribe((data) => {
+      console.log(data);
+      this.router.navigateByUrl("");
+    });
   }
-
 }
