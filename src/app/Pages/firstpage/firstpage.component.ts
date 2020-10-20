@@ -37,15 +37,15 @@ export class FirstpageComponent implements OnInit, AfterViewInit  {
   onLoadChatBot(){
 
     console.log("Came to chatbot function");
-  //   var BotStar=
-  //  {
-  //   appId:"s4f323620-c0ca-4358-9da6-605dbfdcacb5",
-  //   mode:"livechat",
-  //   variables: {
-  //    userTokens: "The Witcher",
-  //   }
-  // };
-  // //window.BotStarApi('boot', BotStar);
+    var BotStar=
+   {
+    appId:"s4f323620-c0ca-4358-9da6-605dbfdcacb5",
+    mode:"livechat",
+    variables: {
+     userTokens: "The Witcher",
+    }
+  };
+  window.BotStarApi('boot', BotStar);
   // !function(t,a):any{
   //    console.log("Function 1");
 
