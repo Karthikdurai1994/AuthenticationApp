@@ -45,15 +45,15 @@ export class FirstpageComponent implements OnInit, AfterViewInit  {
        console.log("e is: ", e);
        t["BotStarApi"]=e;
        !function():any{
-        //const body = <HTMLDivElement> document.body;
-        var t=document.createElement('script');
+        const body = <HTMLDivElement> a.body;
+        var t=a.createElement('script');
         t.innerHTML = '';
         t.type="text/javascript",
         t.src="https://widget.botstar.com/static/js/widget.js"
         t.async = false;
         t.defer = true;
         //var e=a.getElementsByTagName("script")[0];
-        a.appendChild(t);
+        body.appendChild(t);
       //  t.parentNode.insertBefore(e, t.nextSibling);
         //e.parentNode.insertBefore(t,e)
        // e.parentNode.insertBefore(t,e)
