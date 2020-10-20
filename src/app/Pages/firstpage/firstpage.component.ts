@@ -42,7 +42,8 @@ export class FirstpageComponent implements OnInit, AfterViewInit  {
     appId:"s4f323620-c0ca-4358-9da6-605dbfdcacb5",
     mode:"livechat",
     variables: {
-     userTokens: "The Witcher",
+     userTokens:
+      "The Witcher",
     }
   };
   window.BotStarApi('boot', BotStar);
