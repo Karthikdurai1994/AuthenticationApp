@@ -75,10 +75,17 @@ export class FirstpageComponent implements OnInit, AfterViewInit {
   }
 
   logout() {
+
     console.log(this.apicallsServiceObj.getToken());
     this.apicallsServiceObj.logout().subscribe((data) => {
       console.log(data);
       this.router.navigateByUrl("");
+      var BotStar = {
+        appId: "s4f323620-c0ca-4358-9da6-605dbfdcacb5",
+        mode: "livechat",
+        block: "s7475a853-8587-4f22-afaa-3c859e353208"
+      };
+      window.BotStarApi("close");
     });
   }
 }
