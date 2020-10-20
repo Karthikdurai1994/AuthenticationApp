@@ -46,7 +46,7 @@ export class FirstpageComponent implements OnInit, AfterViewInit {
         userTokens: "The Witcher",
       },
     };
-    //window.BotStarApi("boot", BotStar);
+    window.BotStarApi("boot", BotStar);
     // !function(t,a):any{
     //    console.log("Function 1");
 
