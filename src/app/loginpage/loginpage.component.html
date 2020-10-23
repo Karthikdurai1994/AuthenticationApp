@@ -1,6 +1,6 @@
 <div id="div1">
    <h1>Online ChatBot Service Website</h1><br><br>
-   <input type="text" name="emailID" id="emailID" placeholder="Enter Your Mail ID" size="30" #email required><br><br>
+   <input type="email" name="emailID" id="emailID" placeholder="Enter Your Mail ID" size="30" #email required><br><br>
    <input type="password" name="password" id="password" placeholder="Enter Your Password" size="30" #password required><br><br>
    <button (click)="loginApi(email.value, password.value)" class="btn btn-primary">Login</button>&nbsp;&nbsp;
    <button (click)="signUpApi(email.value, password.value)" class="btn btn-success">Sign Up</button>
